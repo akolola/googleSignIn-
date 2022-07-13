@@ -25,8 +25,8 @@ class FirstFragment : Fragment() {
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
 
 
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build()
-        mGoogleSignInClient = GoogleSignIn.getClient(requireActivity(), gso) //<--- /!\
+        val googleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build()
+        mGoogleSignInClient = GoogleSignIn.getClient(requireActivity(), googleSignInOptions) //<--- /!\
 
 
         return binding.root
